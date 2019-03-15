@@ -4,12 +4,17 @@ const Single = ({single}) => {
     console.log(single)
   return (
     <div>
-    <li>
-        <span><strong>Name:</strong> {single.name} </span>
-        <span><strong>Age:</strong> {single.age} </span>
-        <span><strong>Phone:</strong> {single.phone} </span>
+      <li class="collection-header"><h4>{single.name}</h4></li>
+      <li class="collection-item">
+        <span><strong>Age:</strong> {single.age} </span> 
+      </li>
+      <li class="collection-item"> 
+        <span><strong>Phone:</strong> {single.phone} </span> 
+      </li>
+      <li class="collection-item"> 
         <span><strong>Email:</strong> {single.email} </span>
-    </li>
+      </li>
+        <div className="divider"></div>
     </div>
   )
 }

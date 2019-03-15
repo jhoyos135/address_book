@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import { getCurrentPerson } from '../actions/personsActions';
 import AddressContext from '../components/context/address-context';
 import Information from './Information'
 
@@ -10,7 +8,7 @@ class Landing extends Component {
   static contextType = AddressContext;
 
   handleChange = (e) => {
-    const text = e.target.value;
+    const text = e.target.value.toLowerCase();
     this.context.success(text)
   }
 
@@ -43,9 +41,5 @@ class Landing extends Component {
     )
   }
 }
-
-// const mapStateToProps = state => ({
-//     persons: state.persons
-// })
 
 export default Landing

@@ -10,8 +10,6 @@ class GlobalState extends Component {
     customer: []
   }
 
-  
-
 getCurrentPerson = async (name) => {
   this._isMounted = false;
 
@@ -21,12 +19,15 @@ getCurrentPerson = async (name) => {
     this.setState({
       customer: data
     })
-}
+};
 
 success = (text) => {
   let submit = document.querySelector('.submit');
     if(text < 1) {
       submit.setAttribute('disabled', true)
+      this.setState({
+        customer: []
+      })
     } else {
       submit.removeAttribute('disabled')
     }
@@ -39,7 +40,7 @@ handleSubmit = (e) => {
   let name = this.state.search;
   e.preventDefault();
   this.getCurrentPerson(name);
-}
+};
 
   render() {
     return (

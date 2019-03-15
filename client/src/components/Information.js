@@ -5,6 +5,7 @@ import Single from './Single'
 class Information extends Component {
 
     static contextType = AddressContext;
+    
     renderCustomer = () => {
         let customer = this.context.customer;
         if(customer.length !== 0) {
@@ -17,9 +18,9 @@ class Information extends Component {
 
   render() {
     return (
-    <div id="information">
+    <ul id="information" className="collection with-header">
     {this.renderCustomer()} 
-    </div>
+    </ul>
     )
   }
 }
