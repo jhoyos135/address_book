@@ -11,6 +11,7 @@ submit.onclick = function(e) {
     let name = document.querySelector("input.name");
 
     let url = `/api/customers/${name.value.toLowerCase()}`;
+    console.log(url)
 
     fetch(url).then( (data) => {
 
@@ -21,6 +22,7 @@ submit.onclick = function(e) {
     let obj = myCustomers;
 
         for(let i = 0; i < obj.length; i++) {
+            console.log(obj[i])
 
      let customers_found = `
         
@@ -30,6 +32,7 @@ submit.onclick = function(e) {
         <span><strong>Phone:</strong> ${obj[i].phone}</span>
         <span><strong>Email:</strong> ${obj[i].email}</span>
     </li>
+    
 
         `;
         document.querySelector("#information").innerHTML += customers_found;
